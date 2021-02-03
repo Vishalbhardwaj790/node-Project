@@ -1,0 +1,103 @@
+<!--<form [formGroup]="profileForm" (ngSubmit)="SaveTODO()">
+
+  <label>
+    Title:
+    <input type="text" formControlName ="Title">
+  </label>
+
+  <label>
+    Description:
+    <input type="text" formControlName="Description">
+  </label>
+
+  <button type="submit"> Submit</button>
+
+</form>-->
+
+  <p>Add a TODO item</p>
+  <div class="flexcontainer">
+    
+
+    <form [formGroup]="profileForm" (ngSubmit)="SaveTODO()">
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="" formControlName="Title">
+
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+
+          <textarea matInput placeholder="" formControlName="Description"></textarea>
+
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Priority</mat-label>
+
+          <mat-select matSelect placeholder="" formControlName="priority">
+            <mat-option value="High">High</mat-option>
+            <mat-option value="Medium">Medium</mat-option>
+            <mat-option value="Low">Low</mat-option>
+          </mat-select>
+
+        </mat-form-field>
+      </div>
+
+      <div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Due Date</mat-label>
+
+          <input matInput [matDatepicker]="picker" class="form-control" formControlName="DueDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <a class="nav-link text-dark" [routerLink]="['/get-todoitems']">Get All todo items</a>
+  </div>
+<app-my-loader></app-my-loader>
+
+<!--<form [formGroup]="profileForm" (ngSubmit) ="SaveTODO()">
+  <div class="form-group">
+    <label for="Title">Title</label>
+    <input type="text" class="form-control" formControlName ="Title">
+
+  </div>
+  <div class="form-group">
+    <label for="Description">Description</label>
+    <textarea class="form-control"formControlName ="Description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="Title">Due Date</label><br />
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" class="form-control" formControlName ="DueDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>-->
+
+<!--<p>
+  <mat-form-field appearance="legacy">
+    <mat-label>Legacy form field</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</p>-->
+

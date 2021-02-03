@@ -1,0 +1,25 @@
+<h4>Your Todo items</h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Task Name</th>
+      <th scope="col">Due Date</th>
+      <th scope="col">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of todoitems; trackBy:trackByFn;">
+      <td>{{item.title}}</td>
+      <td>{{item.dueDate|date:'yyyy-MM-dd' }}</td>
+      <td> {{item.priority}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<app-my-loader></app-my-loader>
+
+
+
+
